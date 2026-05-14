@@ -1,0 +1,23 @@
+export const SITE = {
+  website: "https://goodbye-world.pages.dev/",
+  author: "Paweł Kamiński",
+  profile: "",
+  desc: "Notes on AI agent orchestration — learning in public.",
+  title: "Goodbye World",
+  ogImage: "astropaper-og.jpg",
+  lightAndDarkMode: true,
+  postPerIndex: 4,
+  postPerPage: 4,
+  scheduledPostMargin: 15 * 60 * 1000,
+  showArchives: true,
+  showBackButton: true,
+  editPost: {
+    enabled: false,
+    text: "Edit page",
+    url: "",
+  },
+  dynamicOgImage: true,
+  dir: "ltr",
+  lang: "en",
+  timezone: "Europe/Warsaw",
+} as const;
