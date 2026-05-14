@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://goodbye-world.pages.dev/",
+  website: "https://blog.kamyk-sklepy.workers.dev/",
   author: "Paweł Kamiński",
-  profile: "",
+  profile: "https://github.com/goodbye-world-dev",
   desc: "Notes on AI agent orchestration — learning in public.",
   title: "Goodbye World",
   ogImage: "astropaper-og.jpg",
@@ -12,9 +12,9 @@ export const SITE = {
   showArchives: true,
   showBackButton: true,
   editPost: {
-    enabled: false,
+    enabled: true,
     text: "Edit page",
-    url: "",
+    url: "https://github.com/goodbye-world-dev/blog/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr",

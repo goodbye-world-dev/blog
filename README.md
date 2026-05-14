@@ -1,8 +1,8 @@
 # Goodbye World
 
-Source for [goodbye-world.pages.dev](https://goodbye-world.pages.dev/) — a learning-in-public blog about AI agent orchestration.
+Source for [blog.kamyk-sklepy.workers.dev](https://blog.kamyk-sklepy.workers.dev/) — a learning-in-public blog about AI agent orchestration.
 
-Built on [Astro Paper](https://github.com/satnaing/astro-paper). Runs on [Bun](https://bun.sh/), deploys to [Cloudflare Pages](https://pages.cloudflare.com/) on every push to `main`.
+Built on [Astro Paper](https://github.com/satnaing/astro-paper). Runs on [Bun](https://bun.sh/), deploys to Cloudflare Workers Static Assets on every push to `main` (config in `wrangler.jsonc`).
 
 ## Run locally
 
@@ -23,7 +23,7 @@ bun run preview  # serve the production build
 
 ## Companion repo
 
-Code examples for each post live at [agenticflow-examples](https://github.com/) (link will work once the repo is up).
+Code examples for each post live at [goodbye-world-dev/agenticflow-examples](https://github.com/goodbye-world-dev/agenticflow-examples).
 
 ## Status
 
