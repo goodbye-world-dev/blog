@@ -36,7 +36,7 @@ const isActive = (path: string) => {
   <div
     id="top-nav-wrap"
     class:list={[
-      "py-4 sm:py-6",
+      "py-2 sm:py-3",
       "border-b border-border",
       "relative w-full bg-background",
       "flex items-baseline justify-between sm:items-center",
@@ -44,9 +44,13 @@ const isActive = (path: string) => {
   >
     <a
       href="/"
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      class="absolute py-1 whitespace-nowrap sm:static sm:my-auto"
+      aria-label="Goodbye World home"
     >
-      {"<Goodbye, World!/>"}
+      <span
+        class="block w-60 h-[48px] bg-[url(/logo-sprite.png)] bg-no-repeat [background-size:100%_200%] [background-position:0%_0%] dark:[background-position:0%_100%]"
+        aria-hidden="true"
+      ></span>
     </a>
     <nav
       id="nav-menu"
