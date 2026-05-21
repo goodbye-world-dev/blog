@@ -47,10 +47,32 @@ const isActive = (path: string) => {
       class="absolute py-1 whitespace-nowrap sm:static sm:my-auto"
       aria-label="Goodbye World home"
     >
-      <span
-        class="block w-60 h-[48px] bg-[url(/logo-sprite.png)] bg-no-repeat [background-size:100%_200%] [background-position:0%_0%] dark:[background-position:0%_100%]"
+      <svg
+        width="240"
+        height="48"
+        viewBox="0 0 240 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
-      ></span>
+        class="overflow-visible"
+      >
+        <text
+          x="0"
+          y="26"
+          font-family="var(--font-jetbrains-mono), 'JetBrains Mono', monospace"
+          font-size="20"
+          font-weight="700"
+          fill="currentColor"
+        >&lt;Goodbye-World/&gt;<tspan fill="#f97316">.dev</tspan></text>
+        <text
+          x="0"
+          y="44"
+          font-family="var(--font-jetbrains-mono), 'JetBrains Mono', monospace"
+          font-size="14"
+          font-weight="700"
+          fill="#f97316"
+        >&gt;_</text>
+      </svg>
     </a>
     <nav
       id="nav-menu"
