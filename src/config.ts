@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://blog.kamyk-sklepy.workers.dev/",
+  website: "https://goodbye-world.dev/",
   author: "Paweł Kamiński",
   profile: "https://github.com/goodbye-world-dev",
   desc: "Notes on AI agent orchestration — learning in public.",

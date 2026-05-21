@@ -1,6 +1,6 @@
 # Goodbye World
 
-Source for [blog.kamyk-sklepy.workers.dev](https://blog.kamyk-sklepy.workers.dev/) — a learning-in-public blog about AI agent orchestration.
+Source for [goodbye-world.dev](https://goodbye-world.dev/) — a learning-in-public blog about AI agent orchestration.
 
 Built on [Astro Paper](https://github.com/satnaing/astro-paper). Runs on [Bun](https://bun.sh/), deploys to Cloudflare Workers Static Assets on every push to `main` (config in `wrangler.jsonc`).
 

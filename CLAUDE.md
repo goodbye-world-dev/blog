@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Source for [Goodbye World](https://blog.kamyk-sklepy.workers.dev/) — Astro Paper-based blog about AI agent orchestration. Deployed to Cloudflare Workers Static Assets on push to `main` (config in `wrangler.jsonc`).
+Source for [Goodbye World](https://goodbye-world.dev/) — Astro Paper-based blog about AI agent orchestration. Deployed to Cloudflare Workers Static Assets on push to `main` (config in `wrangler.jsonc`).
 
 This is the **blog** repo. The parent workspace (`../`) holds shared planning notes in `.ai/` and a workspace-level `CLAUDE.md` with cross-repo context. Read `../CLAUDE.md` first when you need the bigger picture; this file covers blog-specific details only.
 
