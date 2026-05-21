@@ -17,8 +17,7 @@ bun run preview  # serve the production build
 
 - `src/data/blog/` — posts (markdown). Filename `NN-slug.md` keeps the series numbered.
 - `src/config.ts` — site config (title, author, URL, etc.)
-- `src/styles/global.css` — design tokens (dark mode colors from `.ai/design.md`)
-- `.ai/` — planning notes (PL): tech stack rationale, design decisions, post series outline
+- `src/styles/global.css` — design tokens (dark mode colors, typography)
 - `CLAUDE.md` — guidance for Claude Code when editing this repo
 
 ## Companion repo
@@ -27,4 +26,4 @@ Code examples for each post live at [goodbye-world-dev/agenticflow-examples](htt
 
 ## Status
 
-Phase 1 — MVP. Design system, custom layouts, comments, analytics and newsletter come in later phases. See `.ai/README.md` for the full plan.
+Phase 1 — MVP. Design system, custom layouts, comments, analytics and newsletter come in later phases.

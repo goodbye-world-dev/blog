@@ -35,7 +35,7 @@ Build runs `astro check` first — TypeScript errors block the build. Cloudflare
 
 **Homepage particle canvas**: `src/pages/index.astro` contains a fully client-side canvas animation (mouse-repellent particles with connecting lines). It runs only on `astro:page-load`, cleans up on `astro:before-swap`, and clips rendering to the left/right margins (outside the text column) via `ctx.save()/clip()/ctx.restore()`. Particles are disabled on viewports < 768px.
 
-**Fonts**: Inter (headings) and JetBrains Mono (code) are loaded via Astro experimental fonts API in `astro.config.ts` and exposed as `--font-inter` / `--font-jetbrains-mono` CSS variables.
+**Fonts**: Inter (headings) and JetBrains Mono (code) are loaded via Astro fonts API in `astro.config.ts` and exposed as `--font-inter` / `--font-jetbrains-mono` CSS variables. IBM Plex Mono (used by Satori for dynamic OG image generation) is vendored locally in `src/assets/fonts/` — do not replace with a Google Fonts fetch. To re-download: `bun run scripts/download-fonts.ts`.
 
 ## Where things live
 

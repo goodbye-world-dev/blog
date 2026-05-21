@@ -57,25 +57,22 @@ export default defineConfig({
       }),
     },
   },
-  experimental: {
-    preserveScriptOrder: true,
-    fonts: [
-      {
-        name: "Inter",
-        cssVariable: "--font-inter",
-        provider: fontProviders.google(),
-        fallbacks: ["system-ui", "sans-serif"],
-        weights: [400, 500, 600, 700],
-        styles: ["normal"],
-      },
-      {
-        name: "JetBrains Mono",
-        cssVariable: "--font-jetbrains-mono",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [400, 500],
-        styles: ["normal"],
-      },
-    ],
-  },
+  fonts: [
+    {
+      name: "Inter",
+      cssVariable: "--font-inter",
+      provider: fontProviders.google(),
+      fallbacks: ["system-ui", "sans-serif"],
+      weights: [400, 500, 600, 700],
+      styles: ["normal"],
+    },
+    {
+      name: "JetBrains Mono",
+      cssVariable: "--font-jetbrains-mono",
+      provider: fontProviders.google(),
+      fallbacks: ["monospace"],
+      weights: [400, 500],
+      styles: ["normal"],
+    },
+  ],
 });

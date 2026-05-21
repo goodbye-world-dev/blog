@@ -86,7 +86,7 @@ const isActive = (path: string) => {
           </a>
         </li>
         <li class="col-span-2">
-          <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
+          <a href="/posts/00-welcome" class:list={{ "active-nav": isActive("/posts/00-welcome") }}>
             About
           </a>
         </li>
@@ -107,6 +107,18 @@ const isActive = (path: string) => {
                 <IconArchive class="hidden sm:inline-block" />
                 <span class="sm:sr-only">Archives</span>
               </LinkButton>
+            </li>
+          )
+        }
+        {
+          pathname === "/" && (
+            <li class="col-span-1 flex items-center justify-center">
+              <button
+                id="particles-toggle"
+                class="focus-outline flex p-3 sm:p-1 hover:text-accent"
+                title="Pause background animation"
+                aria-label="Pause background animation"
+              >⏸</button>
             </li>
           )
         }

@@ -1,12 +1,11 @@
 import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
-import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
+import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
-import { SITE } from "@/config";
 
 interface Social {
   name: string;
@@ -17,10 +16,16 @@ interface Social {
 
 export const SOCIALS: Social[] = [
   {
-    name: "GitHub",
-    href: "https://github.com/goodbye-world-dev",
-    linkTitle: `${SITE.title} on GitHub`,
-    icon: IconGitHub,
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/kamyk/",
+    linkTitle: "Paweł Kamiński on LinkedIn",
+    icon: IconLinkedin,
+  },
+  {
+    name: "X",
+    href: "https://x.com/kamyk_pl",
+    linkTitle: "Paweł Kamiński on X",
+    icon: IconBrandX,
   },
 ] as const;
 

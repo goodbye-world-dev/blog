@@ -6,27 +6,23 @@ tags: ["meta", "agents"]
 featured: true
 ---
 
-I'm Paweł, and I'm spending the next few months going deep on **AI agent orchestration** — orchestrators, sandboxes, protocols like MCP and ACP, observability, the whole stack. This blog is the lab notebook from that journey.
+My name is Paweł, and I've been programming professionally for almost 20 years. They say every programmer should have a blog — I've been telling myself that for just as long — and every single one of them came with a perfect rotation of excuses: nothing interesting to say, no time, nobody would read it anyway. You know the kind.
+
+What finally broke the streak? AI, obviously — it's changing everything right now. But what finally pushed me over the edge was my participation in the Agentic SDLC hackathon, which showed me there's no future for pure development. So I decided to write about my adventures at the edge of development here. My takeaways from that hackathon: [It's Almost Goodbye, World](/posts/01-almost-goodbye-world) (and the [original in Polish](https://www.linkedin.com/pulse/ju%C5%BC-prawie-goodbye-world-czyli-zaczynamy-gasi%C4%87-%C5%9Bwiat%C5%82o-pawel-kaminski-hmedf/) on LinkedIn).
+
+## What this blog is
+
+Primarily: a way to organise my own thinking. If it turns out to be useful to someone else, great — but I'm not betting the motivation on that. The main topics will be AI, agent orchestration, and the tools I've built or picked up and use every day.
 
 ## Why "Goodbye World"
 
-"Hello world" is what you write when you start. "Goodbye world" is what an agent does after it's spun up its own sandbox, executed a plan, and shut itself down — leaving only an artifact behind. That feedback loop, where you orchestrate something and then step out of the way, is the part of agentic systems I want to understand cold.
+Like many developers, I've written tons of Hello World applications in various programming languages. I call this blog Goodbye World because I believe that pure development is almost done. That's not saying development is over — there's still a ton of software to be written. But most of it probably won't be written by developers. Development won't be a rare skill anymore; it'll be much more accessible to everyone. That's good news for people with ideas for new businesses — now you can build your own software much more easily. But that's a topic for another blog, not here.
 
-## What's coming
-
-A six-post series, written in public as I learn:
-
-1. **What is AI agent orchestration and why I'm diving in** — mental model, MCP vs ACP
-2. **The 2026 landscape of agent orchestration tools** — 16 tools, condensed and categorised
-3. **CrewAI vs the Anthropic SDK** — two approaches to multi-agent pipelines, side-by-side code
-4. **Designing a pipeline from brief to deploy** — DAG scheduling, human gates, the Dev→Review→Test loop
-5. **Archon — my first POC** — GitHub issue → plan → implement → validate → PR
-6. **Agent observability** — what's worth watching and what's noise
-
-Each post follows the same shape: what I wanted to understand, what I tried, what I learned, working code, and the next question that opened up.
 
 ## Stay in the loop
 
-The blog has an [RSS feed](/rss.xml) — that's the only follow mechanism for now. Newsletter comes later, once there's enough material to be worth subscribing to.
+For now, the reliable way to follow new posts is RSS. I may also share links on X as [@kamyk_pl](https://x.com/kamyk_pl). You can find me on [LinkedIn](https://www.linkedin.com/in/kamyk/) or read more about me at [kamyk-pl.github.io](https://kamyk-pl.github.io/).
 
-Code from each post will live in a companion repo. First post drops soon.
+---
+
+*This blog was built with AI assistance — which, given the subject matter, feels about right.*
