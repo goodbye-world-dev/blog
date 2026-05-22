@@ -5,6 +5,8 @@ pubDatetime: 2026-05-12T00:00:00Z
 tags: ["agents", "career", "reflection"]
 ---
 
+*this is a translation of the [original post in Polish](https://www.linkedin.com/pulse/ju%C5%BC-prawie-goodbye-world-czyli-zaczynamy-gasi%C4%87-%C5%9Bwiat%C5%82o-pawel-kaminski-hmedf/) published on LinkedIn in May 2026.*
+
 Last week I took part in the Agentic SDLC hackathon. For a few hours we tried to automate as much of our daily programming work as possible. I'll be honest — those few hours with pizza and "programming" rewired my entire AI worldview. For the first time in years I saw clearly that this isn't about making things better, easier, or more comfortable for us programmers. It's about making us unnecessary.
 
 I thought I had the theory of programming with AI fairly well figured out. Sure, practice always takes a back seat — but it turned out my thinking about AI in programming is *sooo* 2025.
