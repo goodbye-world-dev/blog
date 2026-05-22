@@ -1,5 +1,6 @@
 import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
+import IconRss from "@/assets/icons/IconRss.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
@@ -15,6 +16,12 @@ interface Social {
 }
 
 export const SOCIALS: Social[] = [
+  {
+    name: "RSS",
+    href: "/rss.xml",
+    linkTitle: "RSS Feed",
+    icon: IconRss,
+  },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/kamyk/",

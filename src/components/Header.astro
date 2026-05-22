@@ -47,8 +47,8 @@ const isActive = (path: string) => {
       class="absolute whitespace-nowrap sm:static"
       aria-label="Goodbye World home"
     >
-      <img src="/logo-light.svg" width="320" alt="" aria-hidden="true" class="block dark:hidden" />
-      <img src="/logo-dark.svg"  width="320" alt="" aria-hidden="true" class="hidden dark:block" />
+      <img src="/logo-light.svg" alt="" aria-hidden="true" class="block dark:hidden w-48 sm:w-80" />
+      <img src="/logo-dark.svg"  alt="" aria-hidden="true" class="hidden dark:block w-48 sm:w-80" />
     </a>
     <nav
       id="nav-menu"
@@ -110,7 +110,7 @@ const isActive = (path: string) => {
         }
         {
           pathname === "/" && (
-            <li class="col-span-1 flex items-center justify-center">
+            <li class="col-span-1 hidden sm:flex items-center justify-center">
               <button
                 id="particles-toggle"
                 class="focus-outline flex p-3 sm:p-1 hover:text-accent"

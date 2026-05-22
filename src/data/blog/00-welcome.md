@@ -21,7 +21,7 @@ Like many developers, I've written tons of Hello World applications in various p
 
 ## Stay in the loop
 
-For now, the reliable way to follow new posts is RSS. I may also share links on X as [@kamyk_pl](https://x.com/kamyk_pl). You can find me on [LinkedIn](https://www.linkedin.com/in/kamyk/) or read more about me at [kamyk-pl.github.io](https://kamyk-pl.github.io/).
+For now, the reliable way to follow new posts is [RSS](/rss.xml). I may also share links on X as [@kamyk_pl](https://x.com/kamyk_pl). You can find me on [LinkedIn](https://www.linkedin.com/in/kamyk/) or read more about me at [kamyk-pl.github.io](https://kamyk-pl.github.io/).
 
 ---
 
