@@ -23,7 +23,7 @@ Issue #29: a review view in the TUI plus a drift banner. The implementation land
 
 Twenty-one issues, all closed. Twenty-three merged pull requests, fifteen of which came back with findings to fix. Thirty test files against forty source files.
 
-How easy it was is what surprised me most. And one thing I did not expect: the model took correction from a pull request better than some developers I have worked with. No defensiveness, no negotiation. Just the fix and the test.
+What surprised me most was how easy it was. And one thing I did not expect: the model took correction from a pull request better than some developers I have worked with. No defensiveness, no negotiation. Just the fix and the test.
 
 ## Honestly, though: I am the bus
 
