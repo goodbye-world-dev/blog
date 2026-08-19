@@ -8,12 +8,22 @@ import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
+import { getPath } from "@/utils/getPath";
+
+// The welcome post is pinned in the hero, so it stays out of the post list.
+const WELCOME_POST_ID = "00-welcome";
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const welcomePost = sortedPosts.find(({ id }) => id === WELCOME_POST_ID);
+const latestPosts = sortedPosts.filter(({ id }) => id !== WELCOME_POST_ID);
+
+if (!welcomePost) {
+  throw new Error(
+    `Welcome post "${WELCOME_POST_ID}" not found — update WELCOME_POST_ID in src/pages/index.astro.`
+  );
+}
 ---
 
 <Layout>
@@ -38,34 +48,18 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <p class="mt-2">
           Happy reading.
         </p>
+        <p class="mt-2">
+          New here? Start with <a href={getPath(welcomePost.id, welcomePost.filePath)} class="text-accent decoration-dashed underline-offset-4 hover:underline">{welcomePost.data.title}</a>.
+        </p>
       </div>
     </section>
 
     {
-      featuredPosts.length > 0 && (
-        <section
-          id="featured"
-          class:list={[
-            "pt-12 pb-6",
-            { "border-b border-border": recentPosts.length > 0 },
-          ]}
-        >
-          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+      latestPosts.length > 0 && (
+        <section id="latest-posts" class="pt-6 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">Latest</h2>
           <ul>
-            {featuredPosts.map(data => (
-              <Card variant="h3" {...data} />
-            ))}
-          </ul>
-        </section>
-      )
-    }
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
+            {latestPosts.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" {...data} />
             )}
@@ -85,7 +79,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </Layout>
 
 <style>
-/* Stretch the particle canvas beyond the max-w-3xl text column
+  /* Stretch the particle canvas beyond the max-w-3xl text column
      so dots appear on the left/right margins, not behind the text.
      Canvas is z-0; text wrapper is z-10 → text always on top.
      The section has isolation:isolate so the canvas z-index is
@@ -125,7 +119,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     if (!heroSection) return;
 
     let particlesArray: Particle[] = [];
-    const mouse = { x: null as number | null, y: null as number | null, radius: 120 };
+    const mouse = {
+      x: null as number | null,
+      y: null as number | null,
+      radius: 120,
+    };
 
     function sizeCanvas() {
       if (!canvas) return;
@@ -152,13 +150,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       dx: number;
       dy: number;
       size: number;
-      constructor(
-        x: number,
-        y: number,
-        dx: number,
-        dy: number,
-        size: number
-      ) {
+      constructor(x: number, y: number, dx: number, dy: number, size: number) {
         this.x = x;
         this.y = y;
         this.dx = dx;
@@ -239,7 +231,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       const textLeft = Math.max(0, (canvas.width - TEXT_COL) / 2);
       const textRight = Math.min(canvas.width, textLeft + TEXT_COL);
       ctx.beginPath();
-      ctx.rect(0, 0, textLeft, canvas.height);         // left margin
+      ctx.rect(0, 0, textLeft, canvas.height); // left margin
       ctx.rect(textRight, 0, canvas.width - textRight, canvas.height); // right margin
       ctx.clip();
     }
@@ -253,7 +245,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       if (window.innerWidth < 768) return;
       ctx.save();
       applyMarginClip();
-      for (let i = 0; i < particlesArray.length; i++) particlesArray[i].update();
+      for (let i = 0; i < particlesArray.length; i++)
+        particlesArray[i].update();
       connect();
       ctx.restore();
     }
@@ -263,7 +256,9 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       paused = !paused;
       if (toggleBtn) {
         toggleBtn.textContent = paused ? "▶" : "⏸";
-        toggleBtn.title = paused ? "Play background animation" : "Pause background animation";
+        toggleBtn.title = paused
+          ? "Play background animation"
+          : "Pause background animation";
         toggleBtn.setAttribute("aria-label", toggleBtn.title);
       }
       if (!paused && ctx && canvas) {
